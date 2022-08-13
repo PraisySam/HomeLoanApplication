@@ -1,0 +1,54 @@
+<form #NewLoginForm="ngForm" (ngSubmit)=addUser(NewLoginForm) novalidate>
+    <div class="box px-5 my-5">
+        <table>
+            <tr>
+                <td><label for="loginId">Login ID</label> </td>
+                <td><input type="text" name="loginId" placeholder="Enter Login ID" maxlength = "4" ngModel required ></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="emailId">Email ID</label> </td>
+                <td><input  type="email" name="emailId"  placeholder="xyz@gmail.com" ngModel required></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="password">Password</label> </td>
+                <td><input type="password" name="password" placeholder="Password" ngModel required></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="confirmPassword">Confirm Password</label> </td>
+                <td><input type="password" name="confirmPassword" placeholder="Re-enter password" ngModel required> </td>
+            </tr>
+            
+            <tr><td></td><td class="errormsg">{{e1}}</td></tr>
+            <br>           
+            <tr>
+                <td><label for="secQues">Security Question</label> </td>
+                <td>
+                    <select name="secQues" ngModel required>
+                        <option value="NA">--select--</option>
+                        <option *ngFor="let c of secQ" value="{{c}}">
+                            {{c}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="secAns">Security Answer</label> </td>
+                <td><input type="text" name="secAns" ngModel required></td>
+            </tr>
+            <br>
+            
+            <tr>
+                <td><button type="reset" class="btn btn-warning my-2">Reset</button> </td>
+                <td><button type="submit" [disabled]="!NewLoginForm.valid"
+                        class="btn btn-primary py-2my-2" >Register</button></td>
+            </tr>
+            <br>
+            <a routerLink="/login">Existing Customer</a>
+        </table>
+    </div>
+</form>
+

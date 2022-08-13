@@ -1,0 +1,8 @@
+.box{
+    border: 2px solid rgb(177, 160, 68);
+    width: 500px;
+    padding: 5%;
+    margin-top: 5%;
+    font-size: large;
+    margin-left: 30%;
+}

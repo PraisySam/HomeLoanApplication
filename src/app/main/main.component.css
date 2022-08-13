@@ -1,0 +1,26 @@
+a{
+    margin: 2%;
+    padding: 1%;
+    height: 60px;
+    width: 200px;
+}
+
+.image{
+    align-items: center;
+    margin-left: 18%;
+    padding: 2%;
+}
+a{
+    margin: 1%;
+    padding: 1%;
+}
+#box{
+    margin: 10%;
+    height: 500px;
+    border: 2px solid rgb(177, 160, 68);
+    
+}
+#box>a{
+    margin: 10%;
+    margin-left: 20%;
+}

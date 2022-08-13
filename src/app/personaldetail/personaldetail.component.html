@@ -1,0 +1,45 @@
+<p>personaldetail works!</p>
+
+<form #homeloanForm="ngForm" (ngSubmit)=addPersonal(homeloanForm) novalidate>
+    <table>
+           <!-- <tr><td><label for="personal_Id">pid NO</label> </td>
+                <td><input type="number" name="personal_Id" ngModel required></td>
+            </tr>-->
+            <div class="form-group">
+            <tr><td><label for="phone_Number">phone_Number</label> </td>
+                <td><input type="number" name="phone_Number" ngModel required></td>
+            </tr>
+      
+            <tr><td><label for="aadhar_Number">aadhar_Number</label> </td>
+                <td><input type="number" name="aadhar_Number" ngModel required></td>
+            </tr>
+            <tr><td><label for="first_Name">First_Name</label> </td>
+                <td><input type="text" name="first_Name" ngModel required></td>
+            </tr>
+            <tr><td><label for="last_Name">Last_Name</label> </td>
+                <td><input type="text" name="last_Name" ngModel required></td>
+            </tr>
+            <tr><td><label for="middle_Name">middle_Name</label> </td>
+                <td><input type="text" name="middle_Name" ngModel required></td>
+            </tr>
+            <tr><td><label for="gender">gender</label> </td>
+                <td><input type="text" name="gender" ngModel required></td>
+            </tr>
+            <tr><td><label for="nationality">nationality</label> </td>
+                <td><input type="text" name="nationality" ngModel required></td>
+            </tr>
+            <tr><td><label for="pan_Number">pan_Number</label> </td>
+                <td><input type="text" name="pan_Number" ngModel required></td>
+            </tr>
+            <tr><td><label for="dob">Date_of_birth</label> </td>
+                <td><input type="date" name="dob" ngModel required></td>
+            </tr>
+        
+        
+           <tr>
+            <td><button type="reset" class="btn btn-danger">Reset</button> </td>
+            <td><button type="submit" [disabled]="!homeloanForm.valid" class="btn btn-primary" >Save</button></td>
+      </tr>
+    </div>
+    </table>
+</form>

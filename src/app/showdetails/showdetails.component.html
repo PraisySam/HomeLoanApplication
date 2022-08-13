@@ -1,0 +1,60 @@
+
+<!--
+<label>enter personal_Id</label>
+<input type="number" [(ngModel)]="pid">
+<button (click)="showDetails">Submit</button>
+-->
+<div class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead style="color: rgb(0, 0, 0);">
+        <th>personal_Id </th> <th>aadhar_Number </th> <th>phone_Number </th><th>first_Name </th><th>middle_Name</th><th>last_Name </th> <th>pan_Number </th> <th>Date_of_birth </th><th>gender </th><th>nationality</th>
+    </thead>
+    <tbody>
+            <tr>
+                    
+                    <td>{{ homeloan.personal_Id}}</td>
+                    <td>{{ homeloan.aadhar_Number}}</td>
+                    <td>{{ homeloan.phone_Number}}</td>
+                    <td>{{ homeloan.first_Name}}</td>
+                    <td>{{ homeloan.middle_Name}}</td>
+                    <td>{{ homeloan.last_Name}}</td>
+                    <td>{{ homeloan.pan_Number}}</td>
+                    <td>{{ homeloan.dob}}</td>
+                    <td>{{ homeloan.gender}}</td>
+                    <td>{{ homeloan.nationality}}</td>
+                                       
+            </tr>
+    </tbody>
+    
+</table>
+
+</div>
+<button class="btn btn-link"><a [routerLink]="['/personalupdate',homeloan.personal_Id]" class="btn btn-warning">Edit</a></button>
+  
+<br>
+<br>
+<br>
+<div class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <th>income_Id </th> <th>property_Location </th> <th>retirement_Age </th><th>monthly_Income </th><th>organisation_type </th><th>estimated_Amount </th> <th>property_Name </th> <th>employer_Name </th><th>type_of_Employment </th>
+    </thead>
+    <tbody>
+            <tr>
+                    
+                    <td>{{ income.income_Id}}</td>
+                    <td>{{ income.property_Location}}</td>
+                    <td>{{ income.retirement_Age}}</td>
+                    <td>{{ income.monthly_Income}}</td>
+                    <td>{{ income.organisation_type}}</td>
+                    <td>{{ income.estimated_Amount}}</td>
+                    <td>{{ income.property_Name}}</td>
+                    <td>{{ income.employer_Name}}</td>
+                    <td>{{ income.type_of_Employment}}</td>
+                  
+            </tr>
+    </tbody>
+</table>
+</div>
+<button class="btn btn-link"><a [routerLink]="['/incomeupdate',income.income_Id]" class="btn btn-warning">Edit</a></button> 
+                        <!-- <a href="#" class="btn btn-danger">Delete </a>-->

@@ -1,0 +1,71 @@
+<div class="row mx-5 my-5">
+    <div class="col-6 " style="align-items: center;">
+        <div style="margin-left: 25%;">
+        <h4 style="text-align: center;">Eligibility Calculator</h4>
+        <br>
+
+        <h2>Monthly Income :</h2>
+        <div class="input-group has-validation">
+            <input type="number" [(ngModel)]="salary" ngModel required>
+            <span class="input-group-text" id="inputGroupPrepend">₹</span>
+        </div>
+        <br>
+        <br>
+
+        <label for="interest">Home Loan Eligibility : </label>
+        <td style="font-size: x-large ; font-weight: bold; border: 2px solid rgb(177, 160, 68);">{{sum}}</td>
+    </div>
+    </div>
+    <div class="col-6">
+        <div style="margin-left: 25%;">
+        <h4 style="text-align: center;">EMI Calculator</h4>
+        <br>
+
+        <br>
+
+        <h2>Loan Amount:</h2>
+        <div class="input-group has-validation">
+            <input type="number" [(ngModel)]="loan" ngModel required>
+            <span class="input-group-text" id="inputGroupPrepend">₹</span>
+        </div>
+        <br>
+        <br>
+
+        <h2>Tenure:</h2>
+        <div class="input-group has-validation">
+            <input type="number" [(ngModel)]="tenure" ngModel required>
+            <span class="input-group-text" id="inputGroupPrepend">Mo</span>
+        </div>
+        <br>
+
+        <label for="interest">Rate of Interest:</label>
+        <div class="input-group has-validation">
+            <select [(ngModel)]="interest" ngModel required>
+                <option disabled selected value>-select-</option>
+                <option value=6.5>
+                    6.5
+                </option>
+                <option value=7.5>
+                    7.5
+                </option>
+                <option value=8>
+                    8
+                </option>
+                <option value=8.5>
+                    8.5
+                </option>
+            </select>
+            <span class="input-group-text" id="inputGroupPrepend">%</span>
+        </div>
+        <br>
+
+        <label for="interest">Loan EMI :</label>
+        <td style="font-size: x-large ; font-weight: bold; border: 2px solid rgb(177, 160, 68);">{{EMI}}</td>
+        <label for="interest">Total Payment (Principal + Interest) :</label>
+        <td style="font-size: x-large ; font-weight: bold; border: 2px solid rgb(177, 160, 68);">{{Amount}}</td>
+
+</div>
+    </div>
+
+
+</div>

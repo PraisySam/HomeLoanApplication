@@ -1,0 +1,42 @@
+
+<form #incomeForm="ngForm" (ngSubmit)=addIncome(incomeForm) novalidate>
+    <table>
+        <div class="form-group">
+           <!-- <tr><td><label for="income_Id">pincome_Id no</label> </td>
+                <td><input type="number" name="income_Id" ngModel required></td>
+            </tr>-->
+            
+            <tr><td><label for="retirement_Age">retirement_Age</label> </td>
+                <td><input type="number" name="retirement_Age" ngModel required></td>
+            </tr>
+            <tr><td><label for="monthly_Income">monthly_Income</label> </td>
+                <td><input type="number" name="monthly_Income" ngModel required></td>
+            </tr>
+            <tr><td><label for="property_Location">property_Location</label> </td>
+                <td><input type="text" name="property_Location" ngModel required></td>
+            </tr>
+            <tr><td><label for="type_of_Employment">type_of_Employment</label> </td>
+                <td><input type="text" name="type_of_Employment" ngModel required></td>
+            </tr>
+            <tr><td><label for="organisation_type">organisation_type</label> </td>
+                <td><input type="text" name="organisation_type" ngModel required></td>
+            </tr>
+            <tr><td><label for="property_Name">property_Name</label> </td>
+                <td><input type="text" name="property_Name" ngModel required></td>
+            </tr>
+            <tr><td><label for="employer_Name">employer_Name</label> </td>
+                <td><input type="text" name="employer_Name" ngModel required></td>
+            </tr>
+            <tr><td><label for="estimated_Amount">estimated_Amount</label> </td>
+                <td><input type="number" name="estimated_Amount" ngModel required></td>
+            </tr>
+       
+        
+           
+           <tr>
+            <td><button type="reset" class="btn btn-danger">Reset</button> </td>
+            <td><button type="submit" [disabled]="!incomeForm.valid" class="btn btn-primary" >Save</button></td>
+      </tr>
+    </div>
+    </table>
+</form>

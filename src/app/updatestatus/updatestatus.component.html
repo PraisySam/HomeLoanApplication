@@ -1,0 +1,45 @@
+<br><br><br>
+
+
+
+
+<div class="container">
+    <div class="box">
+  <!--  <form #updateStatusForm="ngForm" (ngSubmit)=updateStatus(updateStatusForm) novalidate>-->
+        <table>
+            <tr><td><label for="appId">APP ID</label></td>
+                <td><input type="text" name="app_id" [(ngModel)]="app_id" required disabled></td>
+    
+            </tr>
+            <br>
+            <tr>
+                <td><label for="status">Status</label></td>
+                <td>
+                    
+                    <select name="status" [(ngModel)]="status">
+                        <option *ngFor="let s of statusArray" value="{{s}}">
+                                {{s}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <br>
+            
+    
+            <tr>
+                <td></td>
+                <td><button (click)="updateStatus()" class='btn btn-primary'>Update</button></td>
+            </tr>
+    
+    
+    
+    
+    
+        </table>
+    
+   <!-- </form>-->
+</div>
+
+
+
+</div>

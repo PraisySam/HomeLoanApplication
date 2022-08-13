@@ -1,0 +1,41 @@
+
+
+<form #incomeForm="ngForm" (ngSubmit)=updateIncome(incomeForm) novalidate>
+    <table>
+            <tr><td><label for="income_Id">income_Id no</label> </td>
+                <td><input type="number" name="income_Id" [ngModel]="iid" required></td>
+            </tr>
+            <tr><td><label for="retirement_Age">retirement_Age</label> </td>
+                <td><input type="number" name="retirement_Age" [(ngModel)]="income.retirement_Age" required></td>
+            </tr>
+            <tr><td><label for="monthly_Income">monthly_Income</label> </td>
+                <td><input type="number" name="monthly_Income" [(ngModel)]="income.monthly_Income" required></td>
+            </tr>
+            <tr><td><label for="property_Location">property_Location</label> </td>
+                <td><input type="text" name="property_Location" [(ngModel)]="income.property_Location" required></td>
+            </tr>
+            <tr><td><label for="type_of_Employment">type_of_Employment</label> </td>
+                <td><input type="text" name="type_of_Employment" [(ngModel)]="income.type_of_Employment" required></td>
+            </tr>
+            <tr><td><label for="organisation_type">organisation_type</label> </td>
+                <td><input type="text" name="organisation_type" [(ngModel)]="income.organisation_type" required></td>
+            </tr>
+            <tr><td><label for="property_Name">property_Name</label> </td>
+                <td><input type="text" name="property_Name" [(ngModel)]="income.property_Name" required></td>
+            </tr>
+            <tr><td><label for="employer_Name">employer_Name</label> </td>
+                <td><input type="text" name="employer_Name" [(ngModel)]="income.employer_Name" required></td>
+            </tr>
+            <tr><td><label for="estimated_Amount">estimated_Amount</label> </td>
+                <td><input type="number" name="estimated_Amount" [(ngModel)]="income.estimated_Amount"  required></td>
+            </tr>
+       
+        
+           
+           <tr>
+            <td><button type="reset" class="btn btn-danger">Reset</button> </td>
+            <td><button type="submit" [disabled]="!incomeForm.valid" class="btn btn-primary" >Update</button></td>
+      </tr>
+    </table>
+</form>
+

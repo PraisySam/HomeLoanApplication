@@ -1,0 +1,29 @@
+
+<form class="was-validated" #LoginForm="ngForm" (ngSubmit)=validUser(LoginForm) novalidate>
+    <div class="box px-5 my-5">
+        <table >
+            <tr>
+                <td><label for="emailId">Email ID</label> </td>
+                <td><input class="form-control is-invalid" id="emailId" placeholder="Required email" type="email" name="emailId" ngModel required>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="password">Password</label> </td>
+                <td><input class="form-control is-invalid" id="password" placeholder="Password" type="password" name="password" ngModel required></td>
+            </tr>
+
+            <br>
+            <tr>
+                <td><button type="reset" class="btn btn-warning my-2" >Reset</button> </td>
+                <td><button type="submit" [disabled]="!LoginForm.valid" class="btn btn-primary py-2 my-2"style="margin-left: 65%;" > Submit</button></td>
+            
+            </tr>
+                
+        </table>
+        <a routerLink="/forgotpass">Forgor Password?</a>
+        <br>
+        <a routerLink="/newlogin">New User? Register Here </a>
+    </div>
+
+</form>

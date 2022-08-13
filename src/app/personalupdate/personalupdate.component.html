@@ -1,0 +1,41 @@
+
+<form #homeloanForm="ngForm" (ngSubmit)=updatePersonal(homeloanForm) novalidate>
+    <table>
+            <tr><td><label for="personal_Id">pid NO</label> </td>
+                <td><input type="number" name="personal_Id" [ngModel]="pid" required></td>
+            </tr>
+            <tr><td><label for="phone_Number">ph  NO</label> </td>
+                <td><input type="number" name="phone_Number" [(ngModel)]="homeloan.phone_Number" required></td>
+            </tr>
+            <tr><td><label for="aadhar_Number">Aadhar NO</label> </td>
+                <td><input type="number" name="aadhar_Number" [(ngModel)]="homeloan.aadhar_Number" required></td>
+            </tr>
+            <tr><td><label for="first_Name">First_Name</label> </td>
+                <td><input type="text" name="first_Name" [(ngModel)]="homeloan.first_Name" required></td>
+            </tr>
+            <tr><td><label for="last_Name">Last_Name</label> </td>
+                <td><input type="text" name="last_Name" [(ngModel)]="homeloan.last_Name" required></td>
+            </tr>
+            <tr><td><label for="middle_Name">middle_Name</label> </td>
+                <td><input type="text" name="middle_Name" [(ngModel)]="homeloan.middle_Name" required></td>
+            </tr>
+            <tr><td><label for="gender">gender</label> </td>
+                <td><input type="text" name="gender" [(ngModel)]="homeloan.gender" required></td>
+            </tr>
+            <tr><td><label for="nationality">nationality</label> </td>
+                <td><input type="text" name="nationality" [(ngModel)]="homeloan.nationality" required></td>
+            </tr>
+            <tr><td><label for="pan_Number">pan_Number</label> </td>
+                <td><input type="text" name="pan_Number" [(ngModel)]="homeloan.pan_Number" required></td>
+            </tr>
+            <tr><td><label for="dob">dob</label> </td>
+                <td><input type="date" name="dob" [(ngModel)]="homeloan.dob" required></td>
+            </tr>
+        
+           
+           <tr>
+            <td><button type="reset" class="btn btn-danger">Reset</button> </td>
+            <td><button type="submit" [disabled]="!homeloanForm.valid" class="btn btn-primary" >Update</button></td>
+      </tr>
+    </table>
+</form>
